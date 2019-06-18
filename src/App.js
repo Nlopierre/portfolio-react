@@ -1,39 +1,45 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
-import Layout from "./containers/layout/Layout"
+import Home from "./containers/home/home";
+import About from "./containers/about/about"
+//import Navbar from "./containers/navbar/navbar";
+import Portfolio from "./containers/portfolio/portfolio"
+import Experiments from "./containers/experiments/experiments"
+import Contact from "./containers/contact/contact"
+import Toolbar from './containers/toolbar/toolbar';
+
+//import SideDrawer from './components/SideDrawer/SideDrawer';
+//import Backdrop from './components/Backdrop/Backdrop';
+
+
 import './App.scss';
 
 class App extends Component {
 
+  state = {
+    sideDrawerOpen: false
+}
+
+drawerToggleClickHandler = ()=>{
+    this.setState( (prevState) =>{
+        return{sideDrawerOpen: !prevState.sideDrawerOpen};
+    });
+}
 
   render(){
-    return (
-      <BrowserRouter>
-      <div className="App">
-        <Switch>
-          <Route  exact path='/' component={Layout}/>
-        </Switch>
-      </div>
-      </BrowserRouter>
-    );
+    return(
+        <div  id="outer-container">
+        <Toolbar outerContainerId={"outer-container"} pageWrapId={"page-wrap"}/>
+        <div id="page-wrap">
+          <Home/>
+          <About/>
+          <Portfolio/>
+          <Experiments/>
+          <Contact/>
+        </div>
+        </div>
+    )
   }
 }
 
 export default App;
-/*
-<header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        */

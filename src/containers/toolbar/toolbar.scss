@@ -1,0 +1,122 @@
+@import "../../Colors.scss";
+
+.navbar{
+    background: $primaryColor;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #fdbb2d, #051937);  /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #fdbb2d, #0f489e, #051937); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color:  $secondaryColor;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    z-index: 200;
+    box-shadow: 0px 5px 5px $secondaryColor;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    transition: all 600ms ease-in;
+    &--hidden{
+        top:-60px;
+    }
+}
+
+
+#logo{
+    margin: 0px 0px 0px 30px;
+    padding: 0px;
+    &:hover{
+        background: $primaryColor;
+    }
+    img{
+        height:55px;
+    }
+}
+
+.menu-container{
+    width: 36px;
+    height: 30px;
+    padding: 0 20px 0 0;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+position: relative;
+width: 36px;
+height: 30px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+background: $tertiaryColor;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+height: 24px;
+width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+background: $tertiaryColor;
+}
+
+.bm-menu-wrap{
+    background: $primaryColor;
+    top:0;
+    width: 50%;
+    max-width: 350px;
+}
+
+/* General sidebar styles */
+.bm-menu {
+background: $primaryColor;
+font-size: 1.15em;
+width: 100%;
+padding: 50px 0;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+ width: 100%;
+}
+
+.bm-item{
+    color: $tertiaryColor;
+    padding: 10px 0px 10px 25px;
+    cursor: pointer;
+    &:hover{
+        background: $secondaryColor;
+    }
+}
+
+/* Styling of overlay */
+.bm-overlay {
+background: rgba(0, 0, 0, 0.3);
+top:0;
+left: 0;
+}
+
+.spacer{
+display: flex;
+flex: 1;
+}
+
+.navbar-link{
+    text-decoration: none;
+    color: $tertiaryColor;
+    padding: 0px 50px;
+    align-items: center;
+    cursor: pointer;
+    background: $primaryColor;
+    &:hover{
+        background: $secondaryColor;
+    }
+}
+
+.navbar-links{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
