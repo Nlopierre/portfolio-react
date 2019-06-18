@@ -1,6 +1,14 @@
+@import "./Colors.scss";
+
 .App {
-  color: black;
   height:100%;
+  width: 100%;
+  color: $primaryColor;
+}
+
+.outer-container{
+  width:100%;
+  overflow: hidden;
 }
 
 .App-logo {

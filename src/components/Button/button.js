@@ -7,8 +7,9 @@ class ExternalButton extends Component {
     render(){
         const {message} = this.props;
         return(
-            <div className="button" >
+            <div className="button">
             {message}
+            <span class="mdi mdi-arrow-down-bold-circle-outline"></span>
             </div>
         )
     }

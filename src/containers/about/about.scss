@@ -1,9 +1,12 @@
+@import "../../Colors.scss";
+
 #about{
-    padding: 50px 20px 0px 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: space-around;
+    width:100%;
+    background: $tertiaryColor;
 }
 
 .info-container{
@@ -11,6 +14,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-direction: wrap;
+    width: 100%;
 }
 
 .info-header{
@@ -29,7 +33,6 @@
     margin: 50px 0px;
     display: flex;
     flex-wrap: wrap;
-    
 }
 
 .info-about{
@@ -46,6 +49,38 @@
 }
 
 #picture-about{
-    width: 600px;
-    height: 400px;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    max-height: 400px;
+}
+
+.external-button-container{
+    display: flex;
+    justify-content: center;
+}
+.more-info-container{
+    display: flex;
+    margin: 0 10%;
+    flex-direction: column;
+    
+}
+
+@media only screen and (max-device-width: 768px){
+
+    .info-container{
+        margin: 20px 0;
+    }
+    .info-about{
+        margin: 0px 20px;
+    }
+    
+    .content-body{
+        font-size: 14px;
+    }
+
+    .more-info-container{
+        margin: 0px 20px;
+    }
+
 }

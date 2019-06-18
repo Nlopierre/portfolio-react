@@ -31,11 +31,19 @@ drawerToggleClickHandler = ()=>{
         <div  id="outer-container">
         <Toolbar outerContainerId={"outer-container"} pageWrapId={"page-wrap"}/>
         <div id="page-wrap">
-          <Home/>
-          <About/>
-          <Portfolio/>
-          <Experiments/>
-          <Contact/>
+        <Home/>
+        <About/>
+          {
+            false &&
+            <div>
+            
+            
+            <Portfolio/>
+            <Experiments/>
+            <Contact/>
+            </div>
+          }
+          
         </div>
         </div>
     )
