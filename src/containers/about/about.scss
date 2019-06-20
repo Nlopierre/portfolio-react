@@ -7,6 +7,7 @@
     align-items: space-around;
     width:100%;
     background: $tertiaryColor;
+    padding: 50px 0;
 }
 
 .info-container{
@@ -17,16 +18,17 @@
     width: 100%;
 }
 
-.info-header{
+.header{
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
 
-.info-header-content{
+.header-content{
     border-bottom: 5px solid black;
     padding-bottom: 10px;
+    font-size: 36px;
 }
 
 .info-container{
@@ -53,6 +55,12 @@
     height: auto;
     max-width: 600px;
     max-height: 400px;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(50%) sepia(50%);
+    &:hover{
+        filter: grayscale(0%) sepia(0%);
+        box-shadow: 5px 10px $secondaryColor;
+    }
 }
 
 .external-button-container{
@@ -63,7 +71,61 @@
     display: flex;
     margin: 0 10%;
     flex-direction: column;
-    
+}
+
+.skills-container{
+    width: 100%;
+}
+
+.skills-body{
+    display: flex;
+    flex-direction: row;
+    margin: 0px 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.skill{
+    width: 300px;
+}
+
+.about-list{
+    list-style-type: none;
+    list-style-position: inside;
+    padding: 0 0 20px 0;
+    li{
+        margin: 5px 0;
+        span{
+            margin: 0 8px 0 0;
+            color: $primaryColor;
+            transition: all 0.5s;
+            
+        }
+        &:hover{
+            span{
+                transition: all 0.5s;
+                margin: 0 1px 0 0;
+            }
+        }
+    }
+}
+
+.skills-logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.skills-logo{
+    height: auto;
+    width: 100%;
+    min-width: 150px;
+    min-height: 150px;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px 20px;
 }
 
 @media only screen and (max-device-width: 768px){
@@ -83,4 +145,32 @@
         margin: 0px 20px;
     }
 
+    .skills-body{
+        display: flex;
+        justify-content: start;
+    }
+    .skills-logo{
+        width: 100px;
+        height: 100px;
+    }
+
+    .about-list{
+        padding: 0 0 0 20px;
+    }
+
+}
+
+@media only screen and (max-device-width: 1200px){
+    .skills-logo{
+        height: auto;
+        width: 100%;
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+        margin: 10px 20px;
+    }
+    .skill{
+        width: 240px;
+    }
 }

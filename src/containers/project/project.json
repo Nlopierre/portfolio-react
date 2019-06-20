@@ -1,0 +1,46 @@
+{
+    "projects":{
+        "stereotheque" : {
+            "title":"Stereotheque",
+            "subtitle": "Professional Network App for Creative Industries",
+            "description": "",
+            "techStack": [
+                "React"
+            ],
+            "softwareTools": [
+                ""
+            ],
+            "webLink": "",
+            "githubLink": "",
+            "imgPaths":[""]
+        },
+        "bmusic": {
+            "title":"bMusic",
+            "subtitle": "Music Royalties Trading Platform",
+            "description": "",
+            "techStack": [
+                ""
+            ],
+            "softwareTools": [
+                ""
+            ],
+            "webLink": "",
+            "githubLink": "",
+            "imgPaths":[""]
+        },
+        "kevn": {
+            "title":"Kevn",
+            "subtitle": "Official Website for Kevn",
+            "description": "",
+            "techStack": [
+                ""
+            ],
+            "softwareTools": [
+                ""
+            ],
+            "webLink": "",
+            "githubLink": "",
+            "imgPaths":[""]
+        }
+    }
+}

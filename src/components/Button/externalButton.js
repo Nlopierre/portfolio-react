@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
-import "./button.scss";
+import {ArrowForward} from "@material-ui/icons";
+
+import "./externalButton.scss";
 
 
 class ExternalButton extends Component {
+
+
 
     render(){
         const {message} = this.props;
         return(
             <div className="button">
             {message}
-            <span class="mdi mdi-arrow-down-bold-circle-outline"></span>
+            <ArrowForward className="classes.icon arrow-icon" />
+            
             </div>
         )
     }

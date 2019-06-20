@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {slide as Menu} from "react-burger-menu";
-import {Link,  Events, scrollSpy} from "react-scroll";
+import {Link, scrollSpy} from "react-scroll";
 import classnames from "classnames";
 
 import "./toolbar.scss";
@@ -20,14 +20,6 @@ class Toolbar extends Component{
     
     componentDidMount(){
 
-        Events.scrollEvent.register('begin', function(to, element) {
-            console.log("begin", arguments);
-        });
-
-        Events.scrollEvent.register('end', function(to, element) {
-            console.log("end", arguments);
-        });
-
         window.addEventListener("scroll", this.handleScroll);
         window.addEventListener("resize", this.handleMenu);
 
@@ -35,8 +27,6 @@ class Toolbar extends Component{
     }
 
     componentWillUnmount() {
-        Events.scrollEvent.remove('begin');
-        Events.scrollEvent.remove('end');
         window.removeEventListener("scroll", this.handleScroll);
         window.removeEventListener("resize", this.handleMenu);
     }
@@ -52,7 +42,6 @@ class Toolbar extends Component{
                 menuIsActive: false
             });
         }
-        console.log("The Inner width is", window.innerWidth);
     }
 
     handleScroll = () => {
@@ -77,7 +66,7 @@ class Toolbar extends Component{
                 <Menu right>
                     <Link to='about' spy={true} smooth={true} duration={500}><p>About</p></Link>
                     <Link to='portfolio'  spy={true} smooth={true} offset={50} duration={500}><p>Portfolio</p></Link>
-                    <Link to='experiments'  spy={true} smooth={true} offset={50} duration={500}><p>Experiments</p></Link>
+                    <Link to='experience'  spy={true} smooth={true} offset={50} duration={500}><p>Experience</p></Link>
                     <Link to='contact'  spy={true} smooth={true} offset={50} duration={500}><p>Contact</p></Link>
                 </Menu>
             </div>
@@ -85,7 +74,7 @@ class Toolbar extends Component{
             <div className="navbar-links">
                 <Link to='about' className="navbar-link" spy={true} smooth={true} duration={500}><p>About</p></Link>
                 <Link to='portfolio' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Portfolio</p></Link>
-                <Link to='experiments' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Experiments</p></Link>
+                <Link to='experience' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Experience</p></Link>
                 <Link to='contact' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Contact</p></Link>
             </div>
             }

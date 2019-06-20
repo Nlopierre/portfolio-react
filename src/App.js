@@ -1,17 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { withRouter } from "react-router";
 
-import Home from "./containers/home/home";
-import About from "./containers/about/about"
-//import Navbar from "./containers/navbar/navbar";
-import Portfolio from "./containers/portfolio/portfolio"
-import Experiments from "./containers/experiments/experiments"
-import Contact from "./containers/contact/contact"
 import Toolbar from './containers/toolbar/toolbar';
-
-//import SideDrawer from './components/SideDrawer/SideDrawer';
-//import Backdrop from './components/Backdrop/Backdrop';
-
-
+import Layout from './containers/layout/layout';
+import Project from "./containers/project/project";
 import './App.scss';
 
 class App extends Component {
@@ -27,25 +20,20 @@ drawerToggleClickHandler = ()=>{
 }
 
   render(){
+
+    const ProjectWrapped = withRouter(props => <Project {...props}/>);
     return(
-        <div  id="outer-container">
+      <BrowserRouter>
+        <div  id="outer-container" className="App">
         <Toolbar outerContainerId={"outer-container"} pageWrapId={"page-wrap"}/>
-        <div id="page-wrap">
-        <Home/>
-        <About/>
-          {
-            false &&
-            <div>
-            
-            
-            <Portfolio/>
-            <Experiments/>
-            <Contact/>
-            </div>
-          }
-          
+        <Switch>
+          <Route exact path='/' component={Layout} />
+          <Route path='/stereotheque' render={() => <ProjectWrapped project={"stereotheque"} /> } />
+          <Route path='/bmusic' render={() => <ProjectWrapped project={"bmusic"}  /> } />
+          <Route path='/kevn' render={() => <ProjectWrapped project={"kevn"}  /> } />
+        </Switch>
         </div>
-        </div>
+      </BrowserRouter>
     )
   }
 }
