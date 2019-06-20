@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
-import {Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import "./portfolio.scss";
 
 class Portfolio extends Component {
-
-    constructor(props){
-        super(props);
-        this.state = {
-            redirect: false
-          }
-    }
 
     projects = [
         {
@@ -43,21 +36,6 @@ class Portfolio extends Component {
         },
     ];
 
-    handleCardClick(){
-        console.log("I'm chaging the state");
-        this.setState({
-            redirect: true
-        })
-        
-    }
-
-    renderRedirect = (target) => {
-        if (this.state.redirect) {
-            console.log("im rendering");
-          return <Redirect to={target} />
-        }
-      }
-
     render(){
         return(
             <div id="portfolio">
@@ -76,8 +54,7 @@ class Portfolio extends Component {
                             <div className="project-card-back">
                                 <img alt={card.projectImgAltBack} src={card.projectImgBack}/>
                                 <div>{card.projectDescription}</div>
-                                <button onClick={()=>this.handleCardClick}>Learn More</button>
-                                {this.renderRedirect(card.projectLink)}
+                                <Link to={card.projectLink}>Learn More</Link>
                             </div>
                         </div>  
                         );                 

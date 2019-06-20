@@ -1,0 +1,9 @@
+@import "../../Colors.scss";
+
+#project{
+    min-height: 100vh;
+    background: $tertiaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -9,7 +9,7 @@ class Project extends Component{
         const {project} = this.props;
         console.log(project);
         return(
-            <div></div>
+            <div id="project">The project named {project} will be displayed here</div>
         );
     }
 }
