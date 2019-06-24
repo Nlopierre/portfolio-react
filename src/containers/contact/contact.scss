@@ -21,6 +21,18 @@
     margin: 20px 0;
 }
 
+.email-hide{
+    height: 0px;
+    opacity: 0.0;
+    transition: height 500ms 500ms, opacity 500ms 0ms;
+}
+
+.email-show{
+    height: 100%;
+    opacity: 1.0;
+    transition: height 500ms 0ms, opacity 500ms 500ms;
+}
+
 .contact-social-media{
     width: 100%;
     display: flex;

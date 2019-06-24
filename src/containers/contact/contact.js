@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from "classnames";
 
 import ShowBelowButton from "../../components/Button/showBelowButton";
 import "./contact.scss";
@@ -9,6 +10,18 @@ import spotifyLogo from "../../assets/spotify-icon.png";
 
 
 class Contact extends Component {
+    constructor(props){
+        super(props);
+        this.state={
+            expandMoreInfo: false
+        }
+    }
+    
+    openMoreInfo(){
+        this.setState({
+            expandMoreInfo: !this.state.expandMoreInfo
+        });
+    }
 
     render(){
         return(
@@ -18,8 +31,10 @@ class Contact extends Component {
                 </div>
                 <div className="contact-body">
                     <div className="message contact-body-content">Do you have any inquiries, questions or potential projects?</div>
-                    <ShowBelowButton className="contact-body-content" message={"Send an Email"} onClick={()=>this.openMoreInfo}/>
-                    <div className="email contact-body-content">Feel free to send me an email to <a href="mailto:nlopierre@gmail.com">nlopierre "at" gmail.com</a></div>
+                    <div  className="contact-body-content" onClick={()=>this.openMoreInfo()}>
+                        <ShowBelowButton message={"Send an Email"} />
+                    </div>
+                    <div className={classnames("email-hide","contact-body-content", {"email-show": this.state.expandMoreInfo})}>Feel free to send me an email to <a href="mailto:nlopierre@gmail.com">nlopierre "at" gmail.com</a></div>
                 </div>
                 <div className="contact-social-media">
                     <a href="https://www.linkedin.com/in/nicolas-lopierre-aguirre-449925a3/"  rel="noopener noreferrer" target="_blank">
