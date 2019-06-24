@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
 import './about.scss';
 import {Devices} from "@material-ui/icons";
+import { CSSTransitionGroup } from 'react-transition-group';
+import classnames from "classnames";
 
 import bioPic from "../../assets/bio-pic.JPG";
 import ShowBelowButton from "../../components/Button/showBelowButton";
-
 import reactLogo from "../../assets/react-logo.png";
 import ethereumLogo from "../../assets/ethereum-logo.png";
 import nodeJsLogo from "../../assets/node-js-logo.png";
 
 class About extends Component {
+
+    constructor(props){
+        super(props);
+        this.state={
+            expandMoreInfo: false
+        }
+    }
     
     openMoreInfo(){
-        console.log("This is working");
+        this.setState({
+            expandMoreInfo: !this.state.expandMoreInfo
+        });
     }
+
+    buttonMessage = {
+        false: "More About Me", 
+        true: "Less About Me"
+    };
 
     render(){
         return(
@@ -41,12 +56,14 @@ class About extends Component {
                         practices to improve business skills in areas such as Customer Research and Business Development.
                         </p>
                         <div className="external-button-container">
-                            <ShowBelowButton message={"More About Me"} onClick={()=>this.openMoreInfo}/>
+                            <div onClick={()=>this.openMoreInfo()}>
+                                <ShowBelowButton message={this.buttonMessage[this.state.expandMoreInfo]} expanded={this.state.expandMoreInfo}/>
+                            </div>
                         </div>
                         
                     </div>
                 </div>
-                <div className="more-info-container">
+                <div className={classnames("more-info-container-hide", {"more-info-container-show": this.state.expandMoreInfo})}>
                     <h3>Interests</h3>
                     <p className="body-text">In general, I like reading, working out to stay healthy, watching football (soccer) and gaming every once in a while.</p>
 

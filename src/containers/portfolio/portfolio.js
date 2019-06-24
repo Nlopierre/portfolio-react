@@ -68,7 +68,7 @@ class Portfolio extends Component {
                                 <div className={classnames("project-card-back", card.projectImgBack)}>
                                     <div className="card-description">{card.projectDescription}</div>
                                     <div className="card-link">
-                                        <LinkButton message={"Learn More"} to={card.projectLink}></LinkButton>
+                                        <LinkButton message={"Learn More"} linkPath={card.projectLink}></LinkButton>
                                     </div>
                                 </div>
                             </div>
