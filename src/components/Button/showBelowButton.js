@@ -8,9 +8,9 @@ class showBelowButton extends Component {
     render(){
         const {message} = this.props;
         return(
-            <div className="button">
+            <div className="expand-below-button">
             {message}
-            <ArrowForward className="classes.icon arrow-icon" />
+            <ArrowForward className="classes.icon expand-below-arrow-icon" />
             </div>
         )
     }

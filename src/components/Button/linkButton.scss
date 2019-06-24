@@ -1,0 +1,53 @@
+@import "../../Colors.scss";
+
+.link-container{
+    text-decoration: none;
+}
+
+.link-button{
+    background: $secondaryColor;
+    color: $tertiaryColor;
+    border: 2px solid $secondaryColor;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all .5s;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .link-arrow-icon{
+        animation: link-rotate-90 0.3s linear;
+        transform: rotate(0deg);
+    }
+    &:hover{
+        background: $primaryColor;
+        color: $tertiaryColor;
+        border: 2px solid $primaryColor;
+        box-shadow: 5px 10px 18px $primaryColor;
+        .link-arrow-icon{
+            animation: link-rotate90 0.3s linear;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@keyframes link-rotate90 {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes link-rotate-90 {
+	from {
+		transform: rotate(-45deg)
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}

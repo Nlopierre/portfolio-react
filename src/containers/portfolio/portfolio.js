@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 
 import "./portfolio.scss";
 import kevnPic from "../../assets/kevn-card.jpg";
 import strtqePic from "../../assets/strtqe-card.png";
 import bmusicPic from "../../assets/bmusic-card.png";
 import classnames from "classnames";
+import LinkButton from '../../components/Button/linkButton';
 
 
 class Portfolio extends Component {
@@ -67,7 +67,9 @@ class Portfolio extends Component {
                                 </div>
                                 <div className={classnames("project-card-back", card.projectImgBack)}>
                                     <div className="card-description">{card.projectDescription}</div>
-                                    <Link to={card.projectLink} className="card-link">Learn More</Link>
+                                    <div className="card-link">
+                                        <LinkButton message={"Learn More"} to={card.projectLink}></LinkButton>
+                                    </div>
                                 </div>
                             </div>
                         </div>  

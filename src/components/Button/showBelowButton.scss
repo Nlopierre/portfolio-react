@@ -1,6 +1,6 @@
  @import "../../Colors.scss";
 
-.button{
+.expand-below-button{
     border: 2px solid $primaryColor;
     font-size: 18px;
     font-weight: bold;
@@ -12,22 +12,22 @@
     justify-content: center;
     align-items: center;
     
-    .arrow-icon{
-        animation: rotate-90 0.3s linear;
+    .expand-below-arrow-icon{
+        animation: expand-below-rotate-90 0.3s linear;
         transform: rotate(0deg);
     }
     &:hover{
         background: $primaryColor;
         color: $tertiaryColor;
         box-shadow: 5px 10px 18px $secondaryColor;
-        .arrow-icon{
-            animation: rotate90 0.3s linear;
+        .expand-below-arrow-icon{
+            animation: expand-below-rotate90 0.3s linear;
             transform: rotate(90deg);
         }
     }
 }
 
-@keyframes rotate90 {
+@keyframes expand-below-rotate90 {
 	from {
 		transform: rotate(0deg)
 	}
@@ -36,7 +36,7 @@
 	}
 }
 
-@keyframes rotate-90 {
+@keyframes expand-below-rotate-90 {
 	from {
 		transform: rotate(90deg)
 	}
