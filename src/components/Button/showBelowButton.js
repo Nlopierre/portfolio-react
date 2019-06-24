@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {ArrowForward} from "@material-ui/icons";
+import {ExpandMore} from "@material-ui/icons";
 
 import "./showBelowButton.scss";
 
@@ -10,7 +10,7 @@ class showBelowButton extends Component {
         return(
             <div className="expand-below-button">
             {message}
-            <ArrowForward className="classes.icon expand-below-arrow-icon" />
+            <ExpandMore className="classes.icon expand-below-arrow-icon" />
             </div>
         )
     }
