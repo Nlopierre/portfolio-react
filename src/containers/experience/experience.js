@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from "classnames";
 
 import "./experience.scss";
 
@@ -107,14 +108,18 @@ class Experience extends Component {
         return(
             <div className="experience-table">
                 <div className="experience-table-header">
-                <div className="experience-role-content"><h3 className="experience-role">{role.name}</h3> at <a href={role.companyLink}>{role.company}</a></div>
-                <div className="experience-role-dates">{role.startDate.month + " " + role.startDate.year +" - " + role.endDate.month + " " + role.endDate.year}</div>
+                    <div className="experience-role-content">
+                        <div className="experience-role">{role.name}</div><div>&nbsp;at&nbsp;</div><a href={role.companyLink}>{role.company}</a>
+                    </div>
+                    <div className="experience-role-dates">
+                        {role.startDate.month + " " + role.startDate.year +" - " + role.endDate.month + " " + role.endDate.year}
+                    </div>
                 </div>
                 <div className="experience-table-content">
-                <ul className="experience-table-list">
+                <ul className="list-organization">
                 {role.description.map((des, i)=>{
                     return(
-                    <li key={i} className=""><span>&#9755;</span>{des}</li>
+                    <li key={i} className="body-text"><span>&#9755;</span><div>{des}</div></li>
                     )
                 })}
                 </ul>
@@ -125,7 +130,7 @@ class Experience extends Component {
 
     render(){
         return(
-            <div className="experience-container" id="experience">
+            <div id="experience">
                 <div className="header">
                     <h1 className="header-content">Where I've Worked</h1>
                 </div>
@@ -133,9 +138,9 @@ class Experience extends Component {
                     <div className="experience-content">
                         {this.displayRole()}
                         <div className="experience-buttons"> 
-                            {Object.keys(this.companies).map((key, i)=>{
+                            {Object.keys(this.companies).map((company, i)=>{
                                 return(
-                                <button className="experience-button" key={i} onClick={()=>this.handleCompanyClick(key)} >{this.companies[key]}</button>
+                                <div className={classnames("experience-button", {"experience-button-active": (this.state.company === company)})} key={i} onClick={()=>this.handleCompanyClick(company)}>{this.companies[company]}</div>
                                 );
                             })}
                         </div>

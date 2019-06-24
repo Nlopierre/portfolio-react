@@ -3,7 +3,7 @@ import './about.scss';
 import {Devices} from "@material-ui/icons";
 
 import bioPic from "../../assets/bio-pic.JPG";
-import ExternalButton from "../../components/Button/externalButton";
+import ShowBelowButton from "../../components/Button/showBelowButton";
 
 import reactLogo from "../../assets/react-logo.png";
 import ethereumLogo from "../../assets/ethereum-logo.png";
@@ -26,7 +26,7 @@ class About extends Component {
                         <img src={bioPic} alt="Nicolas Lopierre Aguirre " id="picture-about" />
                     </div>
                     <div className="info-about">
-                        <p className="content-body"> 
+                        <p className="body-text"> 
                         My name is Nicolas Lopierre Aguirre, I'm a software engineer based in New York City, NY 
                         who takes delight in creating high-impact web applications. As a full-stack developer, 
                         I prioritize efficiency when developing the back end while focusing on making the user 
@@ -35,27 +35,27 @@ class About extends Component {
                         industries, and develop them to test proof of concepts.
                         </p>
 
-                        <p  className="content-body">
+                        <p  className="body-text">
                         I've always been drawn to entrepreneurship and I firmly believe in the potential of Design 
                         Thinking (Creative Confidence is a book I highly recommend). I use best software engineering 
                         practices to improve business skills in areas such as Customer Research and Business Development.
                         </p>
                         <div className="external-button-container">
-                            <ExternalButton message={"More About Me"} onClick={()=>this.openMoreInfo}/>
+                            <ShowBelowButton message={"More About Me"} onClick={()=>this.openMoreInfo}/>
                         </div>
                         
                     </div>
                 </div>
                 <div className="more-info-container">
                     <h3>Interests</h3>
-                    <p className="content-body">In general, I like reading, working out to stay healthy, watching football (soccer) and gaming every once in a while.</p>
+                    <p className="body-text">In general, I like reading, working out to stay healthy, watching football (soccer) and gaming every once in a while.</p>
 
                     <h3>Recommended readings:</h3>
-                    <ul className="about-list">
-                        <li className="content-body"><span>&#9755;</span>Sapiens: A Brief History of Humankind by Yuval Noah Harari</li>
-                        <li className="content-body"><span>&#9755;</span>Creative Confidence by Tom and David Kelley</li>
-                        <li className="content-body"><span>&#9755;</span>Conscious Capitalism by Jonh Mackey and Raj Sisodia</li>
-                        <li className="content-body"><span>&#9755;</span>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future by Ashlee Vance</li>
+                    <ul className="list-organization">
+                        <li className="body-text"><span>&#9755;</span><div>Sapiens: A Brief History of Humankind by Yuval Noah Harari</div></li>
+                        <li className="body-text"><span>&#9755;</span><div>Creative Confidence by Tom and David Kelley</div></li>
+                        <li className="body-text"><span>&#9755;</span><div>Conscious Capitalism by Jonh Mackey and Raj Sisodia</div></li>
+                        <li className="body-text"><span>&#9755;</span><div>Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future by Ashlee Vance</div></li>
                     </ul>
                 </div>
                 <div className="skills-container">
@@ -65,30 +65,30 @@ class About extends Component {
                     <div className="skills-body">
                         <div className="skill">
                             <h3>Front End</h3>
-                            <ul className="about-list">
-                            <li className="content-body"><span>&#9755;</span>HTML5</li>
-                            <li className="content-body"><span>&#9755;</span>SCSS</li>
-                            <li className="content-body"><span>&#9755;</span>Typescript (JS)</li>
-                            <li className="content-body"><span>&#9755;</span>React</li>
+                            <ul className="list-organization">
+                            <li className="body-text"><span>&#9755;</span>HTML5</li>
+                            <li className="body-text"><span>&#9755;</span>SCSS</li>
+                            <li className="body-text"><span>&#9755;</span>Typescript (JS)</li>
+                            <li className="body-text"><span>&#9755;</span>React</li>
                             </ul>
                         </div>
                         <div className="skill">
                             <h3>Back End</h3>
-                            <ul className="about-list">
-                            <li className="content-body"><span>&#9755;</span>NodeJS</li>
-                            <li className="content-body"><span>&#9755;</span>Solidity</li>
-                            <li className="content-body"><span>&#9755;</span>NoSQL</li>
-                            <li className="content-body"><span>&#9755;</span>SQL</li>
-                            <li className="content-body"><span>&#9755;</span>Java and C++ (proficient)</li>
+                            <ul className="list-organization">
+                            <li className="body-text"><span>&#9755;</span>NodeJS</li>
+                            <li className="body-text"><span>&#9755;</span>Solidity</li>
+                            <li className="body-text"><span>&#9755;</span>NoSQL</li>
+                            <li className="body-text"><span>&#9755;</span>SQL</li>
+                            <li className="body-text"><span>&#9755;</span>Java and C++ (proficient)</li>
                             </ul>
                         </div>
                         <div className="skill">
                             <h3>Business Skills</h3>
-                            <ul className="about-list">
-                            <li className="content-body"><span>&#9755;</span>Customer Research</li>
-                            <li className="content-body"><span>&#9755;</span>Ideation and Prototyping</li>
-                            <li className="content-body"><span>&#9755;</span>Crowd Management</li>
-                            <li className="content-body"><span>&#9755;</span>Event Planning and Coordination</li>
+                            <ul className="list-organization">
+                            <li className="body-text"><span>&#9755;</span>Customer Research</li>
+                            <li className="body-text"><span>&#9755;</span>Ideation and Prototyping</li>
+                            <li className="body-text"><span>&#9755;</span>Crowd Management</li>
+                            <li className="body-text"><span>&#9755;</span>Event Planning and Coordination</li>
                             </ul>
                         </div>
                     </div>

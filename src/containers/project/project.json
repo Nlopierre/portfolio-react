@@ -1,46 +1,40 @@
 {
-    "projects":{
-        "stereotheque" : {
-            "title":"Stereotheque",
-            "subtitle": "Professional Network App for Creative Industries",
-            "description": "",
-            "techStack": [
-                "React"
-            ],
-            "softwareTools": [
-                ""
-            ],
-            "webLink": "",
-            "githubLink": "",
-            "imgPaths":[""]
-        },
-        "bmusic": {
-            "title":"bMusic",
-            "subtitle": "Music Royalties Trading Platform",
-            "description": "",
-            "techStack": [
-                ""
-            ],
-            "softwareTools": [
-                ""
-            ],
-            "webLink": "",
-            "githubLink": "",
-            "imgPaths":[""]
-        },
-        "kevn": {
-            "title":"Kevn",
-            "subtitle": "Official Website for Kevn",
-            "description": "",
-            "techStack": [
-                ""
-            ],
-            "softwareTools": [
-                ""
-            ],
-            "webLink": "",
-            "githubLink": "",
-            "imgPaths":[""]
-        }
+    "stereotheque" : {
+        "title":"Stereotheque",
+        "subtitle": "Professional Network App for Creative Industries",
+        "description": "Created a product management web application integrated with firebase to provide insightful observations using graphs and tables with up to date metrics related to product usage, employee task board, and more",
+        "techStack": [
+            "React", "Firebase"
+        ],
+        "softwareTools": ["Heroku"],
+        "webLink": "",
+        "githubLink": "",
+        "imgPaths":["../../assets/strtqe-1.png", "../../assets/strtqe-2.png", "../../assets/strtqe-3.png"]
+    },
+    "bmusic": {
+        "title":"bMusic",
+        "subtitle": "Music Royalties Trading Platform",
+        "description": "",
+        "techStack": [
+            "React", "Solidity", "Firebase"
+        ],
+        "softwareTools": [
+            "Travis-CI", "Ethereum"
+        ],
+        "webLink": "",
+        "githubLink": "",
+        "imgPaths":[""]
+    },
+    "kevn": {
+        "title":"Kevn",
+        "subtitle": "Official Website for Kevn",
+        "description": "",
+        "techStack": [
+            "React"
+        ],
+        "softwareTools": [],
+        "webLink": "",
+        "githubLink": "",
+        "imgPaths":[""]
     }
 }

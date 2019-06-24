@@ -2,24 +2,39 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 
 import "./portfolio.scss";
+import kevnPic from "../../assets/kevn-card.jpg";
+import strtqePic from "../../assets/strtqe-card.png";
+import bmusicPic from "../../assets/bmusic-card.png";
+import classnames from "classnames";
+
 
 class Portfolio extends Component {
+
+    pictures = {
+        "strtqe-front": strtqePic,
+        "strtqe-back": strtqePic,
+        "kevn-front": kevnPic,
+        "kevn-back": kevnPic,
+        "bmusic-front": bmusicPic,
+        "bmusic-back": bmusicPic,
+
+    };
 
     projects = [
         {
             
             projectName: "Stereotheque",
-            projectImgFront: "", //Here goes the image variable
-            projectImgBack: "", //Here goes the image variable
-            projectDescription: "Worked on data visualization web app to manage Stereotheque's main product",
+            projectImgFront: "strtqe-front", //Here goes the image variable
+            projectImgBack: "strtqe-back", //Here goes the image variable
+            projectDescription: "Worked on Stereotheque's data visualization web app to manage the company's main product",
             projectLink: "/stereotheque",
             projectImgAltFront: "Stereotheque logo",
             projectImgAltBack: ""
         },
         {
             projectName: "bMusic",
-            projectImgFront: "", //Here goes the image variable
-            projectImgBack: "", //Here goes the image variable
+            projectImgFront: "bmusic-front", //Here goes the image variable
+            projectImgBack: "bmusic-back", //Here goes the image variable
             projectDescription: "Created a semi-decentralized web application to buy songs as well as royalties through the blockchain",
             projectLink: "/bMusic",
             projectImgAltFront: "bMusic logo",
@@ -27,8 +42,8 @@ class Portfolio extends Component {
         },
         {
             projectName: "Kevn",
-            projectImgFront: "", //Here goes the image variable
-            projectImgBack: "", //Here goes the image variable
+            projectImgFront: "kevn-front", //Here goes the image variable
+            projectImgBack: "kevn-back", //Here goes the image variable
             projectDescription: "Created official web app, and manage services from producer and song writer Kevin Aguirre (Kevn)",
             projectLink: "/Kevn",
             projectImgAltFront: "Kevn playing the guitar",
@@ -45,16 +60,15 @@ class Portfolio extends Component {
                 <div className="projects-container">
                     {this.projects.map((card)=>{ 
                         return(
-                        <div className="project-card" key={card.projectName} >
-                            
-                            <div className="project-card-front">
-                                <img alt={card.projectImgAltFront} src={card.projectImgFront}/>
-                                <div>{card.projectName}</div>
-                            </div>
-                            <div className="project-card-back">
-                                <img alt={card.projectImgAltBack} src={card.projectImgBack}/>
-                                <div>{card.projectDescription}</div>
-                                <Link to={card.projectLink}>Learn More</Link>
+                        <div className="project-card" key={card.projectName}>
+                            <div className="project-card-inner">
+                                <div className={classnames("project-card-front", card.projectImgFront)}>
+                                    <img className="img-front" alt={card.projectImgAltFront} src={this.pictures[card.projectImgFront]}/>
+                                </div>
+                                <div className={classnames("project-card-back", card.projectImgBack)}>
+                                    <div className="card-description">{card.projectDescription}</div>
+                                    <Link to={card.projectLink} className="card-link">Learn More</Link>
+                                </div>
                             </div>
                         </div>  
                         );                 

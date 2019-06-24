@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import ExternalButton from "../../components/Button/externalButton";
+import ShowBelowButton from "../../components/Button/showBelowButton";
 import "./contact.scss";
 import linkedInLogo from "../../assets/linkedin-icon.svg";
 import githubLogo from "../../assets/github-icon.png";
@@ -18,7 +18,7 @@ class Contact extends Component {
                 </div>
                 <div className="contact-body">
                     <div className="message contact-body-content">Do you have any inquiries, questions or potential projects?</div>
-                    <ExternalButton className="contact-body-content" message={"Send an Email"} onClick={()=>this.openMoreInfo}/>
+                    <ShowBelowButton className="contact-body-content" message={"Send an Email"} onClick={()=>this.openMoreInfo}/>
                     <div className="email contact-body-content">Feel free to send me an email to <a href="mailto:nlopierre@gmail.com">nlopierre "at" gmail.com</a></div>
                 </div>
                 <div className="contact-social-media">

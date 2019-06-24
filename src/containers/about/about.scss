@@ -17,6 +17,11 @@
     flex-direction: wrap;
     width: 100%;
 }
+.info-container{
+    margin: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .header{
     display: flex;
@@ -29,12 +34,6 @@
     border-bottom: 5px solid black;
     padding-bottom: 10px;
     font-size: 36px;
-}
-
-.info-container{
-    margin: 50px 0px;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .info-about{
@@ -90,17 +89,22 @@
     width: 300px;
 }
 
-.about-list{
+.list-organization{
     list-style-type: none;
     list-style-position: inside;
     padding: 0 0 20px 0;
     li{
-        margin: 5px 0;
+        margin: 10px 0px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         span{
             margin: 0 8px 0 0;
             color: $primaryColor;
             transition: all 0.5s;
-            
+        }
+        div{
+
         }
         &:hover{
             span{
@@ -128,38 +132,6 @@
     margin: 10px 20px;
 }
 
-@media only screen and (max-device-width: 768px){
-
-    .info-container{
-        margin: 20px 0;
-    }
-    .info-about{
-        margin: 0px 20px;
-    }
-    
-    .content-body{
-        font-size: 14px;
-    }
-
-    .more-info-container{
-        margin: 0px 20px;
-    }
-
-    .skills-body{
-        display: flex;
-        justify-content: start;
-    }
-    .skills-logo{
-        width: 100px;
-        height: 100px;
-    }
-
-    .about-list{
-        padding: 0 0 0 20px;
-    }
-
-}
-
 @media only screen and (max-device-width: 1200px){
     .skills-logo{
         height: auto;
@@ -172,5 +144,44 @@
     }
     .skill{
         width: 240px;
+    }
+}
+
+@media only screen and (max-device-width: 768px){
+
+    .header-content{
+        font-size: 32px;
+    }
+
+    .info-container{
+        margin: 20px 0;
+    }
+    .info-about{
+        margin: 0px 20px;
+    }
+    
+    .body-text{
+        font-size: 14px;
+    }
+
+    .more-info-container{
+        margin: 0px 20px;
+    }
+
+    .skills-body{
+        display: flex;
+        justify-content: start;
+    }
+    .skills-logo{
+        height: auto;
+        width: 100%;
+        min-width: 90px;
+        min-height: 90px;
+        max-width: 90px;
+        max-height: 90px;
+    }
+
+    .about-list{
+        padding: 0 0 0 20px;
     }
 }

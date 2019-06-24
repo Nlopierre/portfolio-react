@@ -7,9 +7,25 @@ class Project extends Component{
 
     render(){
         const {project} = this.props;
-        console.log(project);
+        const proj = projects[project];
+        // const proj = projects[project]; proj.title
         return(
-            <div id="project">The project named {project} will be displayed here</div>
+            <div id="project">
+                <div className="project-info">
+                    <h1 className="project-info-title">{proj.title}</h1>
+                    <div className="project-info-subtitle">{proj.subtitle}</div>
+                    <div className="project-info-description">{proj.description}</div>
+                    <div className="project-info-techstack">{proj.techStack}</div>
+                    <div className="project-info-tools">{proj.softwareTools}</div>
+                </div>
+                <div className="project-carousel">
+                    {proj.imgPaths.map((path, i)=>{
+                        return(
+                            <div key={i} data-src={path} />
+                        )
+                    })}
+                </div>
+            </div>
         );
     }
 }
