@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from "classnames";
+import {Fade} from "react-reveal";
 
 import ShowBelowButton from "../../components/Button/showBelowButton";
 import "./contact.scss";
@@ -26,6 +27,7 @@ class Contact extends Component {
     render(){
         return(
             <div id="contact">
+                <Fade fraction={0.4} bottom>
                 <div className="header">
                     <h1 className="header-content">Contact Me</h1>
                 </div>
@@ -47,6 +49,7 @@ class Contact extends Component {
                         <img className="social-media-icon" src={spotifyLogo} alt="Spotify Logo"/>
                     </a>
                 </div>
+                </Fade>
             </div>
         )
     }

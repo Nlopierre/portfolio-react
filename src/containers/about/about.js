@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './about.scss';
 import {Devices} from "@material-ui/icons";
-import { CSSTransitionGroup } from 'react-transition-group';
 import classnames from "classnames";
+import {Fade, Zoom} from 'react-reveal';
 
 import bioPic from "../../assets/bio-pic.JPG";
 import ShowBelowButton from "../../components/Button/showBelowButton";
@@ -34,13 +34,17 @@ class About extends Component {
         return(
             <div id="about">
                 <div className="header">
+                    <Fade fraction={0.4} bottom>
                     <h1 className="header-content">About Me</h1>
+                    </Fade>
                 </div>
                 <div className="info-container">
+                    <Fade fraction={0.4} bottom cascade>
                     <div className="info-picture-about">
                         <img src={bioPic} alt="Nicolas Lopierre Aguirre " id="picture-about" />
                     </div>
                     <div className="info-about">
+                   
                         <p className="body-text"> 
                         My name is Nicolas Lopierre Aguirre, I'm a software engineer based in New York City, NY 
                         who takes delight in creating high-impact web applications. As a full-stack developer, 
@@ -60,8 +64,8 @@ class About extends Component {
                                 <ShowBelowButton message={this.buttonMessage[this.state.expandMoreInfo]} expanded={this.state.expandMoreInfo}/>
                             </div>
                         </div>
-                        
                     </div>
+                    </Fade>
                 </div>
                 <div className={classnames("more-info-container-hide", {"more-info-container-show": this.state.expandMoreInfo})}>
                     <h3>Interests</h3>
@@ -76,9 +80,12 @@ class About extends Component {
                     </ul>
                 </div>
                 <div className="skills-container">
+                <Fade fraction={0.4} bottom>
                     <div className="header">
                         <h1 className="header-content">Skills</h1>
                     </div>
+                </Fade>
+                    <Fade fraction={0.4} bottom cascade>
                     <div className="skills-body">
                         <div className="skill">
                             <h3>Front End</h3>
@@ -109,7 +116,10 @@ class About extends Component {
                             </ul>
                         </div>
                     </div>
+                    </Fade>  
+                    <Fade fraction={0.4} bottom cascade>
                     <div className="skills-logos">
+                        
                         <img className="skills-logo" src={reactLogo} alt="React logo"/>
                         <img className="skills-logo" src={ethereumLogo} alt="Ethereum logo"/>
                         <img className="skills-logo" src={nodeJsLogo} alt="Node JS logo"/>
@@ -117,7 +127,9 @@ class About extends Component {
                             <Devices className="skills-logo" alt="Business logo"/>
                         </div>
                     </div>
-                </div>                
+                    </Fade>
+                </div>    
+                          
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from "classnames";
+import {Fade} from "react-reveal";
 
 import "./experience.scss";
 
@@ -116,6 +117,7 @@ class Experience extends Component {
                     </div>
                 </div>
                 <div className="experience-table-content">
+                <Fade fraction={0.4} left cascade appear spy={this.state.company} duration={500}>
                 <ul className="list-organization">
                 {role.description.map((des, i)=>{
                     return(
@@ -123,6 +125,7 @@ class Experience extends Component {
                     )
                 })}
                 </ul>
+                </Fade>
                 </div>
             </div>
         )
@@ -131,11 +134,14 @@ class Experience extends Component {
     render(){
         return(
             <div id="experience">
+                <Fade fraction={0.4} bottom>
                 <div className="header">
                     <h1 className="header-content">Where I've Worked</h1>
                 </div>
+                </Fade>
                 <div className="experience-content-wrap">
                     <div className="experience-content">
+                    <Fade fraction={0.4} bottom>
                         {this.displayRole()}
                         <div className="experience-buttons"> 
                             {Object.keys(this.companies).map((company, i)=>{
@@ -144,6 +150,7 @@ class Experience extends Component {
                                 );
                             })}
                         </div>
+                    </Fade>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Fade, Zoom} from 'react-reveal';
 
 import "./portfolio.scss";
 import kevnPic from "../../assets/kevn-card.jpg";
@@ -54,12 +55,16 @@ class Portfolio extends Component {
     render(){
         return(
             <div id="portfolio">
+                <Fade fraction={0.4} bottom >
                 <div className="header">
                     <h1 className="header-content">Projects</h1>
                 </div>
+                </Fade>
+                <Zoom fraction={0.4} bottom cascade>
                 <div className="projects-container">
                     {this.projects.map((card)=>{ 
                         return(
+                        
                         <div className="project-card" key={card.projectName}>
                             <div className="project-card-inner">
                                 <div className={classnames("project-card-front", card.projectImgFront)}>
@@ -72,10 +77,12 @@ class Portfolio extends Component {
                                     </div>
                                 </div>
                             </div>
-                        </div>  
+                        </div>
+                        
                         );                 
                     })}
                 </div>
+                </Zoom>
             </div>
         )
     }
