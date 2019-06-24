@@ -68,16 +68,19 @@
 }
 
 .more-info-container-hide{
+    display: flex;
+    margin: 0 10%;
+    flex-direction: column;
     height: 0px;
     opacity: 0.0;
-    transition: height 500ms 1000ms, opacity 500ms 0ms;
+    transition: opacity 500ms 0ms, height 500ms 500ms;
 }
 
 .more-info-container-show{
     display: flex;
     margin: 0 10%;
     flex-direction: column;
-    height: fit-content;
+    height: 100%;
     opacity: 1.0;
     transition: height 500ms 0ms, opacity 500ms 500ms;
 }
