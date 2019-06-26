@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './about.scss';
 import {Devices} from "@material-ui/icons";
 import classnames from "classnames";
-import {Fade, Zoom} from 'react-reveal';
+import {Fade} from 'react-reveal';
 
 import bioPic from "../../assets/bio-pic.JPG";
 import ShowBelowButton from "../../components/Button/showBelowButton";
@@ -20,6 +20,7 @@ class About extends Component {
     }
     
     openMoreInfo(){
+        console.log(window.location);
         this.setState({
             expandMoreInfo: !this.state.expandMoreInfo
         });

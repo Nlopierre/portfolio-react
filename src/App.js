@@ -1,31 +1,54 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import { withRouter } from "react-router";
+import { createBrowserHistory } from 'history';
 
 import Toolbar from './containers/toolbar/toolbar';
 import Layout from './containers/layout/layout';
 import Project from "./containers/project/project";
 import './App.scss';
 
+const history = createBrowserHistory();
+const unlistenHistory = history.listen((location, action) => {});
+
 class App extends Component {
+  constructor(props){
+    super(props);
 
-  state = {
-    sideDrawerOpen: false
-}
+    this.state= {
+      pathname: window.location.pathname
+    }
+  }
 
-drawerToggleClickHandler = ()=>{
-    this.setState( (prevState) =>{
-        return{sideDrawerOpen: !prevState.sideDrawerOpen};
+componentDidMount(){
+  history.listen((location, action)=>{
+    this.setState({
+        pathname: location.pathname
     });
+  }); 
 }
+
+componentDidUpdate(prevProps){
+  history.listen((location, action)=>{
+      this.setState({
+          pathname: location.pathname
+      });
+  }); 
+}
+
+componentWillUnmount(){
+  unlistenHistory();
+}
+
+componentWillUnmount
 
   render(){
 
     const ProjectWrapped = withRouter(props => <Project {...props}/>);
     return(
-      <BrowserRouter>
+      <Router history={history}>
         <div  id="outer-container" className="App">
-        <Toolbar outerContainerId={"outer-container"} pageWrapId={"page-wrap"}/>
+        <Toolbar outerContainerId={"outer-container"} pageWrapId={"page-wrap"} pathname={this.state.pathname}/>
         <Switch>
           <Route exact path='/' component={Layout} />
           <Route path='/stereotheque' render={() => <ProjectWrapped project={"stereotheque"} /> } />
@@ -33,7 +56,7 @@ drawerToggleClickHandler = ()=>{
           <Route path='/kevn' render={() => <ProjectWrapped project={"kevn"}  /> } />
         </Switch>
         </div>
-      </BrowserRouter>
+      </Router>
     )
   }
 }

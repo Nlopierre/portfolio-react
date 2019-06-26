@@ -3,8 +3,12 @@ import {slide as Menu} from "react-burger-menu";
 import {Link, scrollSpy} from "react-scroll";
 import classnames from "classnames";
 
+
 import "./toolbar.scss";
 import logo from "../../assets/logo font blanco.png";
+
+
+const ActualLink = require("react-router-dom").Link;
 
 class Toolbar extends Component{
 
@@ -22,8 +26,8 @@ class Toolbar extends Component{
 
         window.addEventListener("scroll", this.handleScroll);
         window.addEventListener("resize", this.handleMenu);
-
         scrollSpy.update();
+        
     }
 
     componentWillUnmount() {
@@ -57,11 +61,12 @@ class Toolbar extends Component{
     };
 
     render(){
+
         return(
         <nav  className={classnames("navbar", {"navbar--hidden": !this.state.navbarIsVisible})}>
             <Link to='home' className="navbar-link" id="logo" spy={true} smooth={true} duration={500}><img alt="Logo" src={logo}/></Link>
             <div  className="spacer"/>
-            {this.state.menuIsActive ?
+            {this.props.pathname === "/" ? (this.state.menuIsActive ?
             <div className="menu-container">
                 <Menu right>
                     <Link to='about' spy={true} smooth={true} duration={500}><p>About</p></Link>
@@ -76,6 +81,10 @@ class Toolbar extends Component{
                 <Link to='portfolio' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Portfolio</p></Link>
                 <Link to='experience' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Experience</p></Link>
                 <Link to='contact' className="navbar-link"  spy={true} smooth={true} offset={50} duration={500}><p>Contact</p></Link>
+            </div>)
+            : 
+            <div className="navbar-links">
+                <ActualLink to='/' className="navbar-link" ><p>Go Back Home</p></ActualLink>
             </div>
             }
         </nav>

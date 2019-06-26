@@ -4,6 +4,100 @@
     min-height: 100vh;
     background: $tertiaryColor;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly; 
+    width: 100%;
+}
+
+.project-info{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    
+}
+
+.project-info-title{
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 10px 0px;
+}
+
+.project-info-subtitle{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 10px 0px;
+}
+
+.project-info-description{
+    font-size: 18px;
+    margin: 0 0 10px 0px;    
+}
+
+.project-info-techstack,
+.project-info-tools{
+    font-size: 14px;
+    margin: 0 0 5px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.project-info-tool, 
+.project-info-tech{
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.project-software-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-carousel{
+    width: 700px;
+    background: $primaryColor;
+}
+
+@media only screen and (max-device-width: 1200px){
+    #project{
+        display: flex;
+        flex-direction: column;
+    }
+    .project-info{
+        display: flex;
+        flex-direction: column;
+    }
+    .project-carousel{
+        width: 700px;
+    }
+
+    .project-info{
+        max-width: 700px;
+    }
+} 
+
+@media only screen 
+and (max-device-width: 1200px) 
+and (max-device-height: 768px){
+    #project{
+        padding: 60px 0 0 0;
+    }
+}
+
+@media only screen and (max-device-width: 767px){
+
+    #project{
+        padding: 70px 0 0 0;
+    }
+
+    .project-carousel{
+        width: 100%;
+    }
+
+    .project-info{
+        max-width: 300px;
+        margin: 30px 0 0 0;
+    }
 }

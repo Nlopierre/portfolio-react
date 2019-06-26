@@ -1,20 +1,22 @@
 {
     "stereotheque" : {
         "title":"Stereotheque",
+        "id": "strtqe",
         "subtitle": "Professional Network App for Creative Industries",
-        "description": "Created a product management web application integrated with firebase to provide insightful observations using graphs and tables with up to date metrics related to product usage, employee task board, and more",
+        "description": "Developed a product management web application integrated with firebase to provide insightful observations using graphs and tables with up to date metrics related to product usage, employee task board, and more.",
         "techStack": [
             "React", "Firebase"
         ],
         "softwareTools": ["Heroku"],
-        "webLink": "",
+        "webLink": "http://stereotheque.com/",
         "githubLink": "",
-        "imgPaths":["../../assets/strtqe-1.png", "../../assets/strtqe-2.png", "../../assets/strtqe-3.png"]
+        "imgIndex":["0", "1", "2"]
     },
     "bmusic": {
         "title":"bMusic",
+        "id": "bmusic",
         "subtitle": "Music Royalties Trading Platform",
-        "description": "",
+        "description": "Created a semi decentralized web application that can be used as a marketplace to trade royalties, buy songs directly from artists and upload one's own songs to trade them using Ethereum's Blockchain. Combining the cloud's, blockchain's and the React's power, this marketplace allows users to get paid directly and securely without intermediaries. This was a University project.",
         "techStack": [
             "React", "Solidity", "Firebase"
         ],
@@ -22,19 +24,20 @@
             "Travis-CI", "Ethereum"
         ],
         "webLink": "",
-        "githubLink": "",
-        "imgPaths":[""]
+        "githubLink": "https://github.com/nyu-software-engineering/music-through-blockchain",
+        "imgIndex":["0","1","2","3","4"]
     },
     "kevn": {
         "title":"Kevn",
+        "id": "kevn",
         "subtitle": "Official Website for Kevn",
-        "description": "",
+        "description": "Created the official website for Kevn, and up and coming producer and song writer from Berklee College of Music. Through it, users will be able to track Kevn's work by checking his most recent tracks, samples and demos, among other works. Kevn will be able to retain subscribers' emails to send out newsletters, and get in touch with potential clients. THIS WEBSITE IS CURRENTLY UNDER DEVELOPMENT",
         "techStack": [
             "React"
         ],
-        "softwareTools": [],
+        "softwareTools": [""],
         "webLink": "",
-        "githubLink": "",
-        "imgPaths":[""]
+        "githubLink": "https://github.com/Nlopierre/kevn",
+        "imgIndex":["0"]
     }
 }
