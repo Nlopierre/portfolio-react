@@ -7,20 +7,29 @@ import "./contact.scss";
 import linkedInLogo from "../../assets/linkedin-icon.svg";
 import githubLogo from "../../assets/github-icon.png";
 import spotifyLogo from "../../assets/spotify-icon.png";
-
+import Credits from '../../components/credits/credits';
 
 
 class Contact extends Component {
     constructor(props){
         super(props);
         this.state={
-            expandMoreInfo: false
+            expandMoreInfo: false,
+            expandCredits: false
         }
+
+        this.expandCredits = this.expandCredits.bind(this);
     }
     
     openMoreInfo(){
         this.setState({
             expandMoreInfo: !this.state.expandMoreInfo
+        });
+    }
+
+    expandCredits(){
+        this.setState({
+            expandCredits: !this.state.expandCredits
         });
     }
 
@@ -50,6 +59,13 @@ class Contact extends Component {
                     </a>
                 </div>
                 </Fade>
+                <Fade bottom>
+                    <p className="credits-button" onClick={this.expandCredits}>Credits</p>
+                </Fade>
+                <Fade bottom when={this.state.expandCredits}>
+                    <Credits/>
+                </Fade>
+                
             </div>
         )
     }

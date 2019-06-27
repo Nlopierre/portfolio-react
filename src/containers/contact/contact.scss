@@ -44,6 +44,16 @@
     max-width: 50px;
 }
 
+.credits-button{
+    cursor: pointer;
+    color: $primaryColor;
+    text-decoration: underline $primaryColor;
+    &:hover{
+        color: $secondaryColor;
+        text-decoration: underline $secondaryColor;
+    }
+}
+
 @media only screen and (max-device-width: 1200px){
 
     #contact{
@@ -59,7 +69,7 @@
 
 @media only screen and (max-device-width: 768px){
     #contact{
-        margin: 200px 0 100px 0;
+        margin: 200px 0 0 0;
     }
     
 }
