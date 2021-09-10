@@ -9,6 +9,7 @@ import ShowBelowButton from "../../components/Button/showBelowButton";
 import reactLogo from "../../assets/react-logo.png";
 import ethereumLogo from "../../assets/ethereum-logo.png";
 import nodeJsLogo from "../../assets/node-js-logo.png";
+import unityLogo from "../../assets/unity-logo.png";
 
 class About extends Component {
 
@@ -47,18 +48,18 @@ class About extends Component {
                     <div className="info-about">
                    
                         <p className="body-text"> 
-                        My name is Nicolas Lopierre Aguirre, I'm a software engineer based in New York City, NY 
-                        who takes delight in creating high-impact web applications. As a full-stack developer, 
-                        I prioritize efficiency when developing the back end while focusing on making the user 
-                        interface intuitive, practical, beautiful and pleasant to the users. As a blockchain 
-                        enthusiast, I explore the potential of smart contracts with digital assets within creative 
-                        industries, and develop them to test proof of concepts.
+                            My name is Nicolas Lopierre Aguirre, I'm a software engineer based in New York City, NY
+                            who takes delight in creating high-impact web applications. As a full-stack developer,
+                            I prioritize efficiency when developing the back end while focusing on making the user
+                            interface intuitive, practical, beautiful and pleasant to the users. As a VR/AR/XR enthusiast,
+                            I like with these technologies as I strongly believe that the future of UX/UI lies here.
+                            Which engine do you think will drive the future of VR/AR: Unity or Unreal?
                         </p>
 
                         <p  className="body-text">
-                        I've always been drawn to entrepreneurship and I firmly believe in the potential of Design 
-                        Thinking (Creative Confidence is a book I highly recommend). I use best software engineering 
-                        practices to improve business skills in areas such as Customer Research and Business Development.
+                            I've always been drawn to entrepreneurship and I firmly believe in the potential of Design
+                            Thinking (Creative Confidence is a book I highly recommend). I use best software engineering
+                            practices to improve business skills in areas such as Customer Research and Business Development.
                         </p>
                         <div className="external-button-container">
                             <div onClick={()=>this.openMoreInfo()}>
@@ -70,7 +71,13 @@ class About extends Component {
                 </div>
                 <div className={classnames("more-info-container-hide", {"more-info-container-show": this.state.expandMoreInfo})}>
                     <h3>Interests</h3>
-                    <p className="body-text">In general, I like reading, working out to stay healthy, watching football (soccer) and gaming every once in a while.</p>
+                    <p className="body-text">
+                        I am super passionate about the music industry.
+                        In my free time, I served as manager for the music production duo, TropiTrip.
+                        I also like reading, working out to stay healthy,
+                        watching football (soccer) and gaming every once in a while.
+                    </p>
+                    <p className="body-text"></p>
 
                     <h3>Recommended readings:</h3>
                     <ul className="list-organization">
@@ -91,20 +98,20 @@ class About extends Component {
                         <div className="skill">
                             <h3>Front End</h3>
                             <ul className="list-organization">
-                            <li className="body-text"><span>&#9755;</span>HTML5</li>
-                            <li className="body-text"><span>&#9755;</span>SCSS</li>
-                            <li className="body-text"><span>&#9755;</span>Typescript (JS)</li>
-                            <li className="body-text"><span>&#9755;</span>React</li>
+                                <li className="body-text"><span>&#9755;</span>HTML5</li>
+                                <li className="body-text"><span>&#9755;</span>SCSS</li>
+                                <li className="body-text"><span>&#9755;</span>Typescript (JS)</li>
+                                <li className="body-text"><span>&#9755;</span><b>React</b>/ - Angular/ - Stencil</li>
+                                <li className="body-text"><span>&#9755;</span>Unity</li>
                             </ul>
                         </div>
                         <div className="skill">
                             <h3>Back End</h3>
                             <ul className="list-organization">
-                            <li className="body-text"><span>&#9755;</span>NodeJS</li>
-                            <li className="body-text"><span>&#9755;</span>Solidity</li>
-                            <li className="body-text"><span>&#9755;</span>NoSQL</li>
-                            <li className="body-text"><span>&#9755;</span>SQL</li>
-                            <li className="body-text"><span>&#9755;</span>Java and C++ (proficient)</li>
+                                <li className="body-text"><span>&#9755;</span>NodeJS</li>
+                                <li className="body-text"><span>&#9755;</span>NoSQL</li>
+                                <li className="body-text"><span>&#9755;</span>Java and C++ (proficient)</li>
+                                <li className="body-text"><span>&#9755;</span>Solidity</li>
                             </ul>
                         </div>
                         <div className="skill">
@@ -122,8 +129,9 @@ class About extends Component {
                     <div className="skills-logos">
                         
                         <img className="skills-logo" src={reactLogo} alt="React logo"/>
-                        <img className="skills-logo" src={ethereumLogo} alt="Ethereum logo"/>
+                        <img className="skills-logo" src={unityLogo} alt="Unity logo"/>
                         <img className="skills-logo" src={nodeJsLogo} alt="Node JS logo"/>
+                        <img className="skills-logo" src={ethereumLogo} alt="Ethereum logo"/>
                         <div>
                             <Devices className="skills-logo" alt="Business logo"/>
                         </div>

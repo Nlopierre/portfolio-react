@@ -8,25 +8,21 @@ class Home extends Component {
     render(){
         return(
             <div id="home">
-                <Fade  duration={2000} delay={3500}>
+                <Fade  duration={2000} delay={4000}>
                     <Canvas/>
                 </Fade>
                 <div className="home-intro">
                     <Fade cascade right duration={1000}>
-                        <div>I'm&nbsp;</div>
-                        <div>Nicolas Lopierre Aguirre&nbsp;</div>
+                        <div>I'm Nicolas Lopierre Aguirre.&nbsp;</div>
                     </Fade>
                     <Fade cascade right duration={1000} delay={1000}>
-                        <code>, I'm a&nbsp;</code>
-                        <code>software&nbsp;</code>
-                        <code>engineer&nbsp;</code>
+                        <div>Full-stack engineer.&nbsp;</div>
                     </Fade>
-                    <Fade cascade right duration={500} delay={2000}>
-                        <div>and&nbsp;</div>
+                    <Fade cascade right duration={1000} delay={2000}>
+                        <div>VR/AR/XR enthusiast.&nbsp;</div>
                     </Fade>
-                    <Fade cascade right duration={1000} delay={2500}>
-                        <div>I create apps&nbsp;</div>
-                        <div>for the web.&nbsp;</div>
+                    <Fade cascade right duration={1000} delay={3000}>
+                        <div>Blockchain aficionado.&nbsp;</div>
                     </Fade>
                 </div>
             </div>
