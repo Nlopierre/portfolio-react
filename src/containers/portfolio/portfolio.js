@@ -18,7 +18,6 @@ class Portfolio extends Component {
         "kevn-back": kevnPic,
         "bmusic-front": bmusicPic,
         "bmusic-back": bmusicPic,
-
     };
 
     projects = [

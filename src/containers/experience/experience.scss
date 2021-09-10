@@ -2,7 +2,6 @@
 
 #experience{
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,7 +58,8 @@ a{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 0 50px 0; 
+    margin: 0 0 50px 0;
+    justify-content: space-around;
 }
 
 .experience-button{
@@ -68,7 +68,7 @@ a{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 24%;
+    width: 200px;
     height: 100px;
     background: $primaryColor;
     color: $tertiaryColor;

@@ -55,8 +55,8 @@ class Experience extends Component {
         },
         {
             name: "Business Analyst Intern",
-            company: "Dot Blockchain Media",
-            companyLink: "http://dotblockchainmedia.com/",
+            company: "Verifi Media",
+            companyLink: "https://verifi.media/",
             startDate:{
                 month: "February",
                 year: "2019"
@@ -88,14 +88,32 @@ class Experience extends Component {
                 "Mediating roommate conflicts and assisting with daily emergency coverage rotation.",
                 "Assist with operations of the resource center and provide guidance to residents regarding NYU’s resources."
             ]
-        }
+        },
+        {
+            name: "Software Engineer 2 - Analyst",
+            company: "BlackRock",
+            companyLink: "https://www.blackrock.com/",
+            startDate:{
+                month: "July",
+                year: "2019"
+            },
+            endDate: {
+                present: true
+            },
+            description: [
+                'Maintained and optimized the user Interface and backend servers of a multi-tier Risk Analysis web application',
+                'Developed a micro-frontend ready app to serve as one-stop-shop for BlackRock’s ETF clients to replace current systems that manage over 3 trillion dollars in ETFs world-wide.',
+                'Created company standard library web components using StencilJS, Angular and React for company-wide use, resulting in over 160 apps using it to unify the look and feel of all systems from the company'
+            ]
+        },
     ];
 
     companies = {
-        0:"BlackRock", 
-        1:"Stereotheque", 
-        2:"Dot Blockchain Media", 
-        3:"New York University"
+        0: "BlackRock - Intern",
+        1: "Stereotheque",
+        2: "Dot Blockchain Media",
+        3: "New York University",
+        4: "BlackRock - Analyst",
     };
 
     handleCompanyClick(key){
@@ -113,7 +131,7 @@ class Experience extends Component {
                         <div className="experience-role">{role.name}</div><div>&nbsp;at&nbsp;</div><a href={role.companyLink}>{role.company}</a>
                     </div>
                     <div className="experience-role-dates">
-                        {role.startDate.month + " " + role.startDate.year +" - " + role.endDate.month + " " + role.endDate.year}
+                        { role.startDate.month + " " + role.startDate.year +" - " + (role.endDate.present ? 'Present' : role.endDate.month + " " + role.endDate.year)}
                     </div>
                 </div>
                 <div className="experience-table-content">
