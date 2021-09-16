@@ -10,7 +10,8 @@
         "softwareTools": ["Heroku"],
         "webLink": "http://stereotheque.com/",
         "githubLink": "",
-        "imgIndex":["0", "1", "2"]
+        "imgIndex":["0", "1", "2"],
+        "hasVideo": false
     },
     "bmusic": {
         "title":"bMusic",
@@ -25,7 +26,8 @@
         ],
         "webLink": "",
         "githubLink": "https://github.com/nyu-software-engineering/music-through-blockchain",
-        "imgIndex":["0","1","2","3","4"]
+        "imgIndex":["0","1","2","3","4"],
+        "hasVideo": false
     },
     "kevn": {
         "title":"Kevn",
@@ -38,6 +40,21 @@
         "softwareTools": [""],
         "webLink": "",
         "githubLink": "https://github.com/Nlopierre/kevn",
-        "imgIndex":["0"]
+        "imgIndex":["0"],
+        "hasVideo": false
+    },
+    "constructionSite": {
+        "title":"VR Construction Site",
+        "id": "constructionSite",
+        "subtitle": "Construction Site Demo in Oculus Quest 2 (VR)",
+        "description": "This was project was made to demostrate how can an architect firm could leverage the power of VR to pitch new ideas. It is a demo of an imaginary construction site.\n\nSome features I used in this project include dynamic and static lighting,   locomotion using teleportation, animations, interactive UI (the minimap), interactive objects, ambient and spatial sound, Post-Processing Effects, and light baking for optimization. This project was deployed to Oculus Quest 2.",
+        "techStack": [
+            "Oculus Quest 2"
+        ],
+        "softwareTools": ["Unity"],
+        "webLink": "",
+        "githubLink": "",
+        "imgIndex":["0"],
+        "hasVideo": true
     }
 }

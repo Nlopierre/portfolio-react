@@ -7,7 +7,7 @@ import strtqePic from "../../assets/strtqe-card.png";
 import bmusicPic from "../../assets/bmusic-card.png";
 import classnames from "classnames";
 import LinkButton from '../../components/Button/linkButton';
-
+import constructionSite from '../../assets/construction-site.png';
 
 class Portfolio extends Component {
 
@@ -18,6 +18,7 @@ class Portfolio extends Component {
         "kevn-back": kevnPic,
         "bmusic-front": bmusicPic,
         "bmusic-back": bmusicPic,
+        "construction-site-front": constructionSite
     };
 
     projects = [
@@ -48,6 +49,15 @@ class Portfolio extends Component {
             projectLink: "/Kevn",
             projectImgAltFront: "Kevn playing the guitar",
             projectImgAltBack: ""
+        },
+        {
+            projectName: "VR Construction Site",
+            projectImgFront: "construction-site-front", //Here goes the image variable
+            projectImgBack: "construction-site-front", //Here goes the image variable
+            projectDescription: "Created Construction Site in Unity to be used in Oculus Quest 2",
+            projectLink: "/construction",
+            projectImgAltFront: "Construction Site in 3D for Virtual Reality",
+            projectImgAltBack: "Construction Site in 3D for Virtual Reality"
         },
     ];
 
