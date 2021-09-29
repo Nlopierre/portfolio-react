@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import {Fade, Zoom} from 'react-reveal';
 
 import "./portfolio.scss";
-import kevnPic from "../../assets/kevn-card.jpg";
 import strtqePic from "../../assets/strtqe-card.png";
 import bmusicPic from "../../assets/bmusic-card.png";
 import classnames from "classnames";
@@ -14,8 +13,6 @@ class Portfolio extends Component {
     pictures = {
         "strtqe-front": strtqePic,
         "strtqe-back": strtqePic,
-        "kevn-front": kevnPic,
-        "kevn-back": kevnPic,
         "bmusic-front": bmusicPic,
         "bmusic-back": bmusicPic,
         "construction-site-front": constructionSite
@@ -39,15 +36,6 @@ class Portfolio extends Component {
             projectDescription: "Created a semi-decentralized web application to buy songs as well as royalties through the blockchain",
             projectLink: "/bMusic",
             projectImgAltFront: "bMusic logo",
-            projectImgAltBack: ""
-        },
-        {
-            projectName: "Kevn",
-            projectImgFront: "kevn-front", //Here goes the image variable
-            projectImgBack: "kevn-back", //Here goes the image variable
-            projectDescription: "Created official web app, and manage services from producer and song writer Kevin Aguirre (Kevn)",
-            projectLink: "/Kevn",
-            projectImgAltFront: "Kevn playing the guitar",
             projectImgAltBack: ""
         },
         {

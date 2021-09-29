@@ -15,25 +15,6 @@ class Experience extends Component {
 
     roles=[
         {
-            name: "Software Engineering Summer Analyst",
-            company: "BlackRock",
-            companyLink: "https://www.blackrock.com/",
-            startDate:{
-                month: "May",
-                year: "2018"
-            },
-            endDate:{
-                month: "August",
-                year: "2018"
-            },
-            description: [
-                "Built a data visualization web application for the Reconciliation team of the world’s largest asset manager.",
-                "Assisted with the development of API calls to filter large amounts of data for data visualization app.",
-                "Created portfolio proposal consisting of Tech Exchange-Traded Funds (ETFs) destined to young families.",
-                "Created internal web application to promote amicable work environment and eco-friendly behaviors"
-            ]
-        },
-        {
             name: "Corporate Development Stereo-Intern",
             company: "Stereotheque",
             companyLink: "http://stereotheque.com/",
@@ -51,6 +32,25 @@ class Experience extends Component {
                 "Identified and reached out potential partnerships with which we could develop new business opportunities.",
                 "Assisted with pitch decks in meetings with Venture Capitals.",
                 "Built a management web application using React and Google Firebase to supervise the company’s main product."
+            ]
+        },
+        {
+            name: "Software Engineering Summer Analyst",
+            company: "BlackRock",
+            companyLink: "https://www.blackrock.com/",
+            startDate:{
+                month: "May",
+                year: "2018"
+            },
+            endDate:{
+                month: "August",
+                year: "2018"
+            },
+            description: [
+                "Built a data visualization web application for the Reconciliation team of the world’s largest asset manager.",
+                "Assisted with the development of API calls to filter large amounts of data for data visualization app.",
+                "Created portfolio proposal consisting of Tech Exchange-Traded Funds (ETFs) destined to young families.",
+                "Created internal web application to promote amicable work environment and eco-friendly behaviors"
             ]
         },
         {
@@ -109,9 +109,9 @@ class Experience extends Component {
     ];
 
     companies = {
-        0: "BlackRock - Intern",
-        1: "Stereotheque",
-        2: "Dot Blockchain Media",
+        0: "Stereotheque",
+        1: "BlackRock - Intern",
+        2: "Verifi Media",
         3: "New York University",
         4: "BlackRock - Analyst",
     };

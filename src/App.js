@@ -53,7 +53,6 @@ componentWillUnmount
           <Route exact path='/' component={Layout} />
           <Route path='/stereotheque' render={() => <ProjectWrapped project={"stereotheque"} /> } />
           <Route path='/bmusic' render={() => <ProjectWrapped project={"bmusic"}  /> } />
-          <Route path='/kevn' render={() => <ProjectWrapped project={"kevn"}  /> } />
           <Route path='/construction' render={() => <ProjectWrapped project={"constructionSite"}  /> } />
         </Switch>
         </div>
