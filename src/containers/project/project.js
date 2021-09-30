@@ -17,6 +17,8 @@ import strtqePic3 from "../../assets/strtqe-3.png";
 import githubLogo from "../../assets/github-icon.png";
 import constructionSite from '../../assets/construction-site.png';
 import jaxIntroImage from '../../assets/jax-intro-img.jpg';
+import budgetTrackerImg1 from '../../assets/budget-tracker-1.png';
+import budgetTrackerImg2 from '../../assets/budget-tracker-2.png';
 
 class Project extends Component{
 
@@ -38,6 +40,10 @@ class Project extends Component{
         ],
         jaxTheBarbarianAR: [
             jaxIntroImage
+        ],
+        budgetTracker: [
+            budgetTrackerImg1,
+            budgetTrackerImg2
         ]
     }
 

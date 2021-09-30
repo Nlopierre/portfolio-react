@@ -60,5 +60,20 @@
         "hasGithub": false,
         "imgIndex":["0"],
         "hasVideo": true
+    },
+    "budgetTracker": {
+        "title":"Budget Tracker",
+        "id": "budgetTracker",
+        "subtitle": "Web app to keep track of my personal budget",
+        "description": "This is a personal project of mine to keep track of my own budget. My idea is to purposely, manually add all the transaction that I make through the app so that I exactly know what I am spending and avoid staying out of my budget. \n\n I am constructing this app in phases. The first one is to be able to add, edit and delete transactions. I will create an API for this. The second one is to generate live reports on any time frame through graphs and spending categories. \n\n The third one will be to add some functionality to keep track of investments, loans and run scenarios on payments for each to plan out my financial strategies. THIS WEBSITE IS CURRENTLY UNDER CONSTRUCTION",
+        "techStack": [
+            "React"
+        ],
+        "softwareTools": [""],
+        "webLink": "",
+        "githubInfo": "Project source code available upon request",
+        "hasGithub": false,
+        "imgIndex":["0", "1"],
+        "hasVideo": false
     }
 }

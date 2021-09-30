@@ -8,6 +8,7 @@ import classnames from "classnames";
 import LinkButton from '../../components/Button/linkButton';
 import constructionSite from '../../assets/construction-site.png';
 import jaxIntroImage from '../../assets/jax-intro-img.jpg';
+import budgetTrackerImage from '../../assets/budget-tracker.png';
 
 class Portfolio extends Component {
 
@@ -18,6 +19,7 @@ class Portfolio extends Component {
         "bmusic-back": bmusicPic,
         "construction-site-front": constructionSite,
         "jax-front": jaxIntroImage,
+        "budget-tracker-front": budgetTrackerImage,
     };
 
     projects = [
@@ -57,6 +59,15 @@ class Portfolio extends Component {
             projectLink: "/jax",
             projectImgAltFront: "Game Demo using Augmented Reality",
             projectImgAltBack: "Game Demo using Augmented Reality"
+        },
+        {
+            projectName: "Budget tracker",
+            projectImgFront: "budget-tracker-front", //Here goes the image variable
+            projectImgBack: "budget-tracker-back", //Here goes the image variable
+            projectDescription: "Web app to keep track of my personal budget. UNDER CONSTRUCTION",
+            projectLink: "/budget-tracker",
+            projectImgAltFront: "Picture of a web app to track personal budgets",
+            projectImgAltBack: "Picture of a web app to track personal budgets"
         },
     ];
 
