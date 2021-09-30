@@ -7,6 +7,7 @@ import bmusicPic from "../../assets/bmusic-card.png";
 import classnames from "classnames";
 import LinkButton from '../../components/Button/linkButton';
 import constructionSite from '../../assets/construction-site.png';
+import jaxIntroImage from '../../assets/jax-intro-img.jpg';
 
 class Portfolio extends Component {
 
@@ -15,7 +16,8 @@ class Portfolio extends Component {
         "strtqe-back": strtqePic,
         "bmusic-front": bmusicPic,
         "bmusic-back": bmusicPic,
-        "construction-site-front": constructionSite
+        "construction-site-front": constructionSite,
+        "jax-front": jaxIntroImage,
     };
 
     projects = [
@@ -41,11 +43,20 @@ class Portfolio extends Component {
         {
             projectName: "VR Construction Site",
             projectImgFront: "construction-site-front", //Here goes the image variable
-            projectImgBack: "construction-site-front", //Here goes the image variable
+            projectImgBack: "construction-site-back", //Here goes the image variable
             projectDescription: "Created Construction Site in Unity to be used in Oculus Quest 2",
             projectLink: "/construction",
             projectImgAltFront: "Construction Site in 3D for Virtual Reality",
             projectImgAltBack: "Construction Site in 3D for Virtual Reality"
+        },
+        {
+            projectName: "AR Jax The Barbarian",
+            projectImgFront: "jax-front", //Here goes the image variable
+            projectImgBack: "jax-back", //Here goes the image variable
+            projectDescription: "Demo of the life and world of a viking for Android devices (AR).",
+            projectLink: "/jax",
+            projectImgAltFront: "Game Demo using Augmented Reality",
+            projectImgAltBack: "Game Demo using Augmented Reality"
         },
     ];
 

@@ -9,7 +9,8 @@
         ],
         "softwareTools": ["Heroku"],
         "webLink": "http://stereotheque.com/",
-        "githubLink": "",
+        "githubInfo": "",
+        "hasGithub": false,
         "imgIndex":["0", "1", "2"],
         "hasVideo": false
     },
@@ -25,35 +26,38 @@
             "Travis-CI", "Ethereum"
         ],
         "webLink": "",
-        "githubLink": "https://github.com/nyu-software-engineering/music-through-blockchain",
+        "githubInfo": "https://github.com/nyu-software-engineering/music-through-blockchain",
+        "hasGithub": true,
         "imgIndex":["0","1","2","3","4"],
-        "hasVideo": false
-    },
-    "kevn": {
-        "title":"Kevn",
-        "id": "kevn",
-        "subtitle": "Official Website for Kevn",
-        "description": "Created the official website for Kevn, and up and coming producer and song writer from Berklee College of Music. Through it, users will be able to track Kevn's work by checking his most recent tracks, samples and demos, among other works. Kevn will be able to retain subscribers' emails to send out newsletters, and get in touch with potential clients. THIS WEBSITE IS CURRENTLY UNDER DEVELOPMENT",
-        "techStack": [
-            "React"
-        ],
-        "softwareTools": [""],
-        "webLink": "",
-        "githubLink": "https://github.com/Nlopierre/kevn",
-        "imgIndex":["0"],
         "hasVideo": false
     },
     "constructionSite": {
         "title":"VR Construction Site",
         "id": "constructionSite",
         "subtitle": "Construction Site Demo in Oculus Quest 2 (VR)",
-        "description": "This was project was made to demostrate how can an architect firm could leverage the power of VR to pitch new ideas. It is a demo of an imaginary construction site.\n\nSome features I used in this project include dynamic and static lighting,   locomotion using teleportation, animations, interactive UI (the minimap), interactive objects, ambient and spatial sound, Post-Processing Effects, and light baking for optimization. This project was deployed to Oculus Quest 2.",
+        "description": "This was project was made to demonstrate how can an architect firm could leverage the power of VR to pitch new ideas. It is a demo of an imaginary construction site.\n\nSome features I used in this project include dynamic and static lighting, locomotion using teleportation, animations, interactive UI (the minimap), interactive objects, ambient and spatial sound, Post-Processing Effects, and light baking for optimization. This project is supported in Oculus Quest 2.",
         "techStack": [
-            "Oculus Quest 2"
+            "C#"
         ],
-        "softwareTools": ["Unity"],
+        "softwareTools": ["Unity, Oculus Quest 2"],
         "webLink": "",
-        "githubLink": "",
+        "githubInfo": "Project source code available upon request",
+        "hasGithub": false,
+        "imgIndex":["0"],
+        "hasVideo": true
+    },
+    "jaxTheBarbarianAR": {
+        "title":"Jax The Barbarian - AR Viking",
+        "id": "jaxTheBarbarianAR",
+        "subtitle": "Game demo to display the life and world of a viking for Android devices (AR).",
+        "description": "This was project was made to recreate as close as possible the look and feel of the context story of a character and his world using Augmented Reality. \n\n Some features used to create this project include static and dynamic/response lighting, environment reflection, planar detection, image recognition, object spawning, 3D Asset preview and manipulation, sequenced animations, interactive and responsive UI, and post-processing effects with color grading. This project is supported to Android 11+ devices.",
+        "techStack": [
+            "C#"
+        ],
+        "softwareTools": ["Unity, Android"],
+        "webLink": "",
+        "githubInfo": "Project source code available upon request",
+        "hasGithub": false,
         "imgIndex":["0"],
         "hasVideo": true
     }

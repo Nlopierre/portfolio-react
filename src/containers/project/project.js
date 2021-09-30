@@ -14,9 +14,9 @@ import bMusicPic5 from "../../assets/bmusic-carousel-5.png";
 import strtqePic1 from "../../assets/strtqe-1.png";
 import strtqePic2 from "../../assets/strtqe-2.png";
 import strtqePic3 from "../../assets/strtqe-3.png";
-import kevnPic from "../../assets/kevn-card.jpg";
 import githubLogo from "../../assets/github-icon.png";
 import constructionSite from '../../assets/construction-site.png';
+import jaxIntroImage from '../../assets/jax-intro-img.jpg';
 
 class Project extends Component{
 
@@ -33,12 +33,26 @@ class Project extends Component{
             strtqePic2,
             strtqePic3,
         ],
-        kevn:[
-            kevnPic
-        ],
         constructionSite: [
             constructionSite
+        ],
+        jaxTheBarbarianAR: [
+            jaxIntroImage
         ]
+    }
+
+    getGithubInfo(proj){
+        if (proj.hasGithub){
+            return(
+                <a href={proj.githubInfo}  rel="noopener noreferrer" target="_blank">
+                    <img className="social-media-icon" src={githubLogo} alt="Github Logo"/>
+                </a>
+            )
+        }
+        return (
+            <div className="project-info-tech">{proj.githubInfo}</div>
+        )
+
     }
 
     renderCarousel(proj){
@@ -95,15 +109,7 @@ class Project extends Component{
                                     })}
                                 </div>
                             </div>
-                            { proj.githubLink !== "" ?
-                            <div className="project-software-subsection">
-                                <a href={proj.githubLink}  rel="noopener noreferrer" target="_blank">
-                                    <img className="social-media-icon" src={githubLogo} alt="Github Logo"/>
-                                </a>
-                            </div>
-                            :
-                            <div className="project-software-subsection"></div>
-                            }
+                            {this.getGithubInfo(proj)}
                         </div>
                     </div>
                 </Fade>
